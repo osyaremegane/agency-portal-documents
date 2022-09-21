@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 16
       - name: build
-        run: cd website && yarn build
+        run: cd website && pwd
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
