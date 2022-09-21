@@ -36,10 +36,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: yarn
-
+          
       - name: Install dependencies
-        run: cd website && yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
       
