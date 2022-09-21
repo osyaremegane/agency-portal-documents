@@ -37,12 +37,12 @@ jobs:
         with:
           node-version: 16
       - name: build
-        run: cd website && pwd
+        run: cd website && yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: 'build'
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
